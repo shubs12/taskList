@@ -1,5 +1,8 @@
 import { Component, OnInit , Input} from '@angular/core';
 import { Dish } from '../shared/dish';
+import { DISHES } from '../shared/dishes';
+
+
 
 @Component({
   selector: 'app-item',
@@ -8,7 +11,7 @@ import { Dish } from '../shared/dish';
 })
 export class ItemComponent implements OnInit {
   @Input()
-  dish = Dish;
+  dish: Dish;
   constructor() { }
   ngOnInit(): void {
   }

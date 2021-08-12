@@ -20,15 +20,8 @@
     </mat-grid-list>
   </div>
 
-  <div class="container"
-    fxLayout="row"
-    fxLayout.sm="column"
-    fxLayout.xs="column"
-    fxLayoutAlign.gt-md="space-around center"
-    fxLayoutGap="10px" 
-    fxLayoutGap.xs="0">
+  <app-item [dish] ="selectedDish" ></app-item>
 
-  <app-item [dish] ="selectedDish"></app-item>
 
   <!-- <div fxFlex *ngIf="selectedDish">
     <mat-card >

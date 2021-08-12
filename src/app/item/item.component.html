@@ -1,5 +1,6 @@
-<div fxFlex="40">
-    <div fxFlex *ngIf="dish">
+<div *ngIf="dish">
+<div fxFlex="40" >
+    <div fxFlex>
         <mat-card >
           <mat-card-header >
             <mat-card-title>
@@ -11,7 +12,7 @@
             <p>{{dish.description}}
             </p>
           </mat-card-content>
-          <mat-card-actions>
+          <mat-card-actions *ngIf="dish" >
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
@@ -35,3 +36,4 @@
       </mat-list>
       
   </div>
+</div>

@@ -13,13 +13,24 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ItemComponent } from './item/item.component';
-
+import { DishService } from './services/dish.service';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { PromotionService } from './services/promotion.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    ItemComponent
+    ItemComponent,
+    HeaderComponent,
+    FooterComponent,
+    AboutComponent,
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +45,10 @@ import { ItemComponent } from './item/item.component';
     FormsModule,
     MatListModule
   ],
-  providers: [],
+  providers: [
+    DishService,
+    PromotionService 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
