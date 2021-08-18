@@ -4,11 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatListModule } from '@angular/material/list';
-import {MatFormFieldModule } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,11 +22,18 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { PromotionService } from './services/promotion.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { LoginComponent } from './login/login.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
+    LoginComponent,
     ItemComponent,
     HeaderComponent,
     FooterComponent,
@@ -37,6 +45,9 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserModule,
     MatFormFieldModule,
     MatGridListModule,
+    MatDialogModule,
+    MatSelectModule,
+    MatSlideToggleModule,
     MatCardModule,
     MatButtonModule,
     AppRoutingModule,
@@ -45,11 +56,19 @@ import { MatIconModule } from '@angular/material/icon';
     FlexLayoutModule,
     FormsModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule, 
+    MatInputModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     DishService,
     PromotionService 
+  ],
+  entryComponents: [
+    LoginComponent
   ],
   bootstrap: [AppComponent]
 })

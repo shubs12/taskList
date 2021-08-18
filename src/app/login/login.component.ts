@@ -1,7 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { RouterLink } from '@angular/router';
-import { Dish } from '../shared/dish';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-login',
@@ -10,18 +9,17 @@ import { Dish } from '../shared/dish';
 })
 
 export class LoginComponent implements OnInit {
-  data = []
-  name = '';
-  password='';
 
+  user = {username: '', password: '', remember: false};
 
-  constructor() { }
-  ngOnInit(): void {
+  constructor(public dialogRef: MatDialogRef<LoginComponent>) { }
 
+  ngOnInit() {
   }
 
-  Register(){
-    let a=[this.name,this.password]
-    console.log(a);
+  onSubmit() {
+    console.log('User: ', this.user);
+    this.dialogRef.close();
   }
+
 }
