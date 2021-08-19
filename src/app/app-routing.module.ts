@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'item/:id', component: ItemComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: Error404Component }
 
 ];
