@@ -13,9 +13,10 @@
             </p>
           </mat-card-content>
           <mat-card-actions *ngIf="dish" >
-            <button mat-button (click)="goBack()" >BACK</button>
+            <button mat-button [routerLink]="['/item', prev]"><span class="fa fa-chevron-left fa-lg">PREV</span></button>
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
+            <button mat-button [routerLink]="['/item', next]"><span class="fa fa-chevron-right fa-lg">NEXT</span></button>
           </mat-card-actions>
         </mat-card>
       </div>
