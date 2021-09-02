@@ -29,7 +29,11 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatSliderModule } from '@angular/material/slider'
+import { MatSliderModule } from '@angular/material/slider';
+import { HttpClientModule } from '@angular/common/http';
+import { BaseUrl } from './shared/baseUrl';
+import { LeaderService } from './services/leader.service';
+import { ProcessHTTPmsgService } from './services/process-httpmsg.service';
 
 @NgModule({
   declarations: [
@@ -65,11 +69,15 @@ import { MatSliderModule } from '@angular/material/slider'
     MatCheckboxModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     MatProgressSpinnerModule
   ],
   providers: [
     DishService,
-    PromotionService 
+    PromotionService,
+    LeaderService,
+    ProcessHTTPmsgService,
+    {provide:'BaseUrl',useValue:BaseUrl}
   ],
   entryComponents: [
     LoginComponent
